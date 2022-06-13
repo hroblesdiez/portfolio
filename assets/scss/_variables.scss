@@ -1,0 +1,36 @@
+$primary-color: #262626;
+$secondary-color: #ff7215;
+
+$title-font-family: "Montserrat" sans-serif;
+$text-font-family: "Lato", sans-serif;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@mixin transition-ease {
+  transition: all 0.4s ease-in-out;
+}
+
+@mixin media-s {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}

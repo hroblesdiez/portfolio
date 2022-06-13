@@ -1,0 +1,213 @@
+.about {
+  height: 50vh;
+  padding-top: 0;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+      to right,
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.6)
+    ),
+    url(../img/avatar.jpg) center top;
+  background-size: cover;
+
+  &__img {
+    padding: 3rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    @media screen and (max-width: 350px) {
+      padding: 2rem 2rem 3rem 2rem;
+    }
+    h2 {
+      color: $secondary-color;
+      font-size: 2rem;
+      font-weight: 500;
+      margin: 1rem 0;
+    }
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 0rem;
+    }
+  }
+
+  &__contact {
+    padding: 0.75rem 0.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: $secondary-color;
+    border-radius: 6px;
+    margin-top: 16px;
+    width: 8rem;
+    @include transition-ease;
+    &:hover {
+      background: #fff;
+      color: $secondary-color;
+    }
+  }
+}
+.tools {
+  height: 50vh;
+  text-align: center;
+  padding: 2rem 1rem;
+
+ .about__tools {
+   height: 100%;
+   
+ }
+
+  &__container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 15px;
+    justify-content: center;
+    height: 90%;
+
+    &-card {
+      color: black;
+      margin: 0rem 0.5rem 0.5rem 0.5rem;
+      padding: 0 1rem;
+      width: 100%;
+      position: relative;
+      cursor: pointer;
+      flex: 0 0 40%;
+      
+      background-color: #f3f3f3;
+      border-radius: 6px;
+      &:hover {
+        .view-icons {
+          transform: scale(1);
+          color: #fff;
+          border-radius: 5px;
+        }
+        .title {
+          visibility: hidden;
+        }
+      }
+
+      .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        visibility: visible;
+        @include transition-ease;
+        h3 {
+          font-size: .8rem;
+          text-transform: uppercase;
+        }
+      }
+      .view-icons {
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+        justify-content: center;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        transform: scale(0);
+        @include transition-ease;
+        i {
+          padding-right: 0.75rem;
+          font-size: 1.75rem;
+          text-align: center;
+          position: relative;
+          display: inline-block;
+
+          &:hover {
+            color: $secondary-color;
+            .tooltiptext {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+          .tooltiptext {
+            visibility: hidden;
+            font-family: "Lato", sans-serif;
+            font-size: 0.9rem;
+            width: 120px;
+            background-color: $secondary-color;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -65px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 100%;
+              left: 50%;
+              margin-left: -5px;
+              border-width: 5px;
+              border-style: solid;
+              border-color: $secondary-color transparent transparent transparent;
+            }
+          }
+        }
+        .tailwind {
+          position: relative;
+
+          &:hover {
+            color: $secondary-color;
+            .tooltiptext {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+          svg {
+          padding-right: 0.75rem;
+          width: 2rem;
+          height: auto;
+          text-align: center;
+          display: inline-block;
+
+         
+          
+        }
+        .tooltiptext {
+          visibility: hidden;
+          font-family: "Lato", sans-serif;
+          font-size: 0.9rem;
+          width: 120px;
+          background-color: $secondary-color;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 3px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 150%;
+          left: 50%;
+          margin-left: -65px;
+          opacity: 0;
+          transition: opacity 0.5s ease;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: $secondary-color transparent transparent transparent;
+          }
+        }
+      }
+      }
+    }
+  }
+}
